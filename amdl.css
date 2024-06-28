@@ -144,6 +144,11 @@ body {
     .navbar_donate_me {
         display: none;
     }
+    .textnya {
+    	margin-right: 5px;
+        padding-top: 5%;
+        padding-left: 7%;
+      }
 }
 
 .aktif {
@@ -232,7 +237,6 @@ body {
 }
 
 .hero .textnya p {
-    margin-right: 5px;
     color: #101010;
     font-size: 1.2rem;
     font-weight: 500;
