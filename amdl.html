@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/minercraftory" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/minecraft-3" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/mineplayer" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>AMDL</title>
+    <link rel="stylesheet" href="adml.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="https://www.minecraft.net/content/dam/minecraftnet/games/dungeons/logos/Homepage_Gameplay-Trailer_MC-Dungeons-logo_300x300.png" alt="" class="logo">
+        <div class="navbar_close" id="navbar_close">
+            <i data-feather="x" class="close_icon"></i>
+        </div>
+        <div class="navbar_list">
+            <a href="amdl.html">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#list">Minecraft official</a>
+            <a href="#list">Minecraft beta</a>
+            <a href="#list">Minecraft patch</a>
+        </div>
+        
+        <div class="navbar_humberger" id="humberger">
+            <i data-feather="menu"></i>
+        </div>
+        
+        <div class="navbar_donate_me">
+            <a href="https://saweria.co/ajaymc" target="_blank">Support Me</a>
+        </div>
+    </div> 
+
+    <section class="hero" id="beranda">
+        <div class="textnya">
+            <h1>All<br><span>Minecraft</span><br>Download<br>Link</h1>
+            <p>
+                Where all Minecraft download links gather for <span class="slogan">free, easy access without ads</span>. Enjoy ad-free Minecraft downloads with our curated library of mods, maps, and updates, catering to both seasoned players and newcomers alike.
+            </p>
+        </div>
+    </section>
+    
+    <div class="red-box-atas"></div> <!-- Red box positioned between sections -->
+    
+    <section class="tentang" id="tentang">
+        <div class="text_tentang">
+            <h1>About Us</h1>
+            <p>
+                Welcome to AMDL (All Minecraft Download Link), your one-stop destination for downloading Minecraft for free! Our website offers a seamless, ad-free experience, ensuring that you can easily and quickly download Minecraft without any interruptions. We pride ourselves on providing a user-friendly platform that prioritizes your convenience and satisfaction. With AMDL, you can access all the Minecraft download links you need in one place, making your gaming experience smooth and hassle-free. Join our community today and enjoy Minecraft without the ads and delays.
+            </p>
+        </div>
+    </section>
+    
+    <div class="red-box-bawah"></div> <!-- Red box positioned between sections -->
+
+    <section class="list" id="list">
+        <div class="list-head"><h1>Download<br>Minecraft</h1></div>
+        <div class="list-container">
+            <div class="list-box">
+                <div class="item-container">
+                    <img src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/logos/Homepage_Gameplay-Trailer_MC-OV-logo_300x300.png" alt="Minecraft official" class="minecraft-logo">
+                    <span>Official</span>
+                </div>
+                <div class="item-container">
+                    <img src="https://www.minecraft.net/content/dam/minecraftnet/games/dungeons/logos/Homepage_Gameplay-Trailer_MC-Dungeons-logo_300x300.png" alt="Minecraft Beta" class="minecraft-logo">
+                    <span>Beta</span>
+                </div>
+                <div class="item-container">
+                    <img src="https://www.minecraft.net/content/dam/minecraftnet/games/badger/logos/Homepage_Gameplay-Trailer_MC-Legends-logo_300x300.png" alt="Minecraft Patch" class="minecraft-logo">
+                    <span>Patch</span>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+  <section class="minecraft-official">
+    <form class="minecraft-form">
+        <div class="minecraft-content">
+            <h2>Minecraft Official</h2>
+            <img src="https://www.minecraft.net/content/dam/games/minecraft/screenshots/PLAYTOGETHERPDPScreenshotRefresh2024_exitingPortal_01.png" alt="Minecraft Official" class="minecraft-image">
+            <p>To download Minecraft Official, choose your desired version and click the download icon. ðŸ“¥ Select from the latest updates and features for endless creativity</p>
+            
+            <div id="official-container"></div>
+        </div>
+    </form>
+</section>
+
+<section class="minecraft-beta">
+    <form class="minecraft-form">
+        <div class="minecraft-content">
+            <h2>Minecraft Beta</h2>
+            <img src="https://www.minecraft.net/content/dam/games/minecraft/screenshots/EXPERIENCE_MORE_MinecraftEDU_PrivacyProdigy_darkWeb.png" alt="Minecraft Official" class="minecraft-image">
+            <p>To download Minecraft Beta, choose your desired version and click the download icon. ðŸ“¥ Select from the latest updates and features for endless creativity</p>
+            
+            <div id="beta-container"></div>
+        </div>
+    </form>
+</section>
+
+<section class="minecraft-patch">
+    <form class="minecraft-form">
+        <div class="minecraft-content">
+            <h2>Minecraft Patch</h2>
+            <img src="https://www.minecraft.net/content/dam/games/minecraft/screenshots/EXPLORE_PDPScreenshotRefresh2024_multipleBiomes_01.png" alt="Minecraft Patch" class="minecraft-image">
+            <p>To download Minecraft Patch, choose your desired version and click the download icon. ðŸ“¥ Select from the latest updates and features for endless creativity</p>
+            
+            <div class="patch-options">
+                <div class="patch-option" id="patch32-container">
+                    <h3>32-bit</h3>
+                    <div id="patch32-bit-container"></div>
+                </div>
+                
+                <div class="patch-option" id="patch64-container">
+                    <h3>64-bit</h3>
+                    <div id="patch64-bit-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
+<script src="system.js"></script>
+</body>
+</html>
+
+
