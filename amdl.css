@@ -1,0 +1,548 @@
+:root {
+    --color: #FC4100;
+    --color-gelap: #FF0000;
+    --font-color: #101010;
+    --bg: #35180e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+/* Navbar section */
+
+.navbar .logo {
+    width: 2.6rem;
+    max-width: 7rem;
+}
+
+.navbar {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2.5rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.navbar_list {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    transition: 0.3s;
+}
+
+.navbar_list a:hover {
+    color: var(--color);
+}
+
+.navbar_list a::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid var(--color);
+    transform: scaleX(0);
+    transition: 0.3s linear;
+}
+
+.navbar_list a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar, .navbar_list a {
+    color: #101010;
+    font-size: 1rem;
+    font-weight: 450;
+}
+
+.navbar_donate_me a {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 450;
+}
+
+.navbar_donate_me {
+    color: #fff;
+    border-radius: 20rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to right, var(--color), var(--color-gelap));
+}
+
+.navbar_donate_me:hover {
+    background: transparent;
+    border: 1px solid var(--bg);
+    padding: 0.44rem 0.94rem;
+}
+
+.navbar_humberger {
+    display: none;
+    padding-top: 0.5rem;
+}
+ 
+.navbar.dark .navbar_list a,
+.navbar.dark .navbar_humberger i {
+    color: #fff;
+ }
+
+.navbar.dark .navbar_donate_me a {
+   color: #fff;
+   
+  }
+
+.navbar.dark .navbar_donate_me {
+   background: transparent;
+   border: 1px solid var(--bg);
+    padding: 0.44rem 0.94rem;
+    border-radius: 20rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to right, var(--color), var(--color-gelap));
+ }
+ 
+ .navbar.dark .navbar_close .feather {
+    stroke: #fff;
+ }
+
+.navbar.dark .navbar_humberger {
+    color: #fff;
+  }
+
+.navbar_close {
+    display: none;
+}
+
+/* Responsive section */
+
+@media (max-width: 780px) {
+    .navbar_list {
+        display: none;
+    }
+    .navbar_humberger {
+        display: block;
+    }
+    .hero {
+        display: grid;
+    }
+}
+
+@media (max-width: 430px) {
+    .navbar_donate_me {
+        display: none;
+    }
+}
+
+.aktif {
+    display: grid;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.aktif .navbar_list {
+    display: block;
+}
+
+.aktif .navbar_close {
+    display: block;
+}
+
+.aktif .logo {
+    margin: auto;
+}
+
+.aktif .navbar_list a:hover::after {
+    transform: scaleX(0.2);
+}
+
+.aktif .navbar_humberger {
+    display: none;
+}
+
+.aktif .navbar_donate_me {
+    display: block;
+}
+
+@media (max-width: 430px) {
+    .info-image {
+        margin-top: 6px;
+    }
+    .aktif .navbar_close {
+        padding: 0 10rem;
+        display: flex;
+        left: 0;
+        right: 0;
+        margin-left: 17.5rem;
+        margin-top: 1rem;
+    }
+
+    .aktif .navbar_donate_me {
+        display: block;
+        margin-left: 14rem;
+        margin-right: 14rem;
+    }
+
+    .tentang .text_tentang p {
+        text-align: right;
+        max-width: 2rem;
+        padding-top: 1.5rem;
+    }
+}
+
+/* Hero section */
+
+.hero {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    background-color: #EEEDED;
+    justify-content: space-between;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero .textnya h1 {
+    font-size: 3.8rem;
+    color: #101010;
+    max-width: 45rem;
+    line-height: 4rem;
+}
+
+.hero .textnya span, .hero .textnya .slogan {
+    color: transparent;
+    background: linear-gradient(to right, var(--color), var(--color-gelap));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.hero .textnya p {
+    color: #101010;
+    font-size: 1.2rem;
+    font-weight: 500;
+    max-width: 40rem;
+    padding-top: 1.5rem;
+}
+
+.textnya {
+    padding-top: 5%;
+    padding-left: 7%;
+}
+
+/* Section 2 */
+
+.tentang {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    background-color: #C40018;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.text_tentang {
+    display: grid;
+    justify-content: end;
+    margin: 10%;
+}
+
+.text_tentang h1 {
+    z-index: 8;
+    font-size: 3rem;
+    color: #fff;
+    max-width: 45rem;
+    line-height: 4rem;
+    font-family: 'Minercraftory', sans-serif;
+    text-align: center;
+}
+
+.tentang .text_tentang span, .tentang .text_tentang p {
+    color: #fff;
+}
+
+.tentang .text_tentang p {
+    max-width: 30rem;
+    padding-top: 2rem;
+    text-align: justify;
+}
+
+.text_tentang .pindah_text {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-left: 55%;
+    padding-top: 1.7rem;
+}
+
+.pindah_text i:hover {
+    width: 5rem;
+}
+
+.red-box-atas, .red-box-bawah {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #C40018;
+}
+
+.red-box-atas {
+    top: calc(100vh - 40px);
+    width: 200px;
+    height: 120px;
+}
+
+.red-box-bawah {
+    top: calc(100vh - -75vh);
+    width: 200px;
+    height: 80px;
+}
+
+.list-box {
+    display: flex;
+    align-items: center;
+    background-color: #212121;
+    padding: 20px;
+    border-radius: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 20px;
+}
+
+.item-container {
+    font-size: 0.8rem;
+    text-align: center;
+    font-family: 'Minecraft', sans-serif;
+}
+
+.item-container img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+/* Download section */
+
+.list {
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.selected {
+    border: 2px solid #fff;
+    padding: 4px;
+}
+
+.minecraft-logo {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.minecraft-logo:active {
+    transform: scale(0.9);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.list-head {
+    margin-top: 70px;
+    font-family: 'MinePlayer', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.minecraft-official, .minecraft-beta, .minecraft-patch {
+    justify-content: center;
+    align-items:center;
+    padding: 50px 20px;
+    background-color: #1a1a1a;
+}
+
+.minecraft-beta, .minecraft-patch {
+    display: none;
+}
+
+.patch-option h3 {
+    text-align: left;
+    font-size: 13px;
+    color: #ffffff;
+    padding: 5px;
+    font-family: 'Minecraft', sans-serif;
+}
+
+.minecraft-form {
+    background-color: #212121;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+    margin: auto;
+}
+
+.minecraft-form.active {
+    opacity: 1;
+}
+
+.minecraft-content {
+    text-align: left;
+}
+
+.minecraft-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 1.8;
+}
+
+.minecraft-content h2 {
+    transform: translate(-0%, -150%);
+    color: #F5F7F8;
+    text-align: center;
+    font-family: 'MinePlayer', sans-serif;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+.minecraft-content h2::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 200%;
+    background-color: #C40018;
+    z-index: -1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.minecraft-content p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #fff;
+    text-align: justify;
+    font-family: 'Minecraft', sans-serif;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #151515;
+    color: #F5F7F8;
+    position: relative;
+}
+
+.info-image {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.info-text {
+    flex-grow: 1;
+}
+
+.small-text {
+    margin-left: 10px;
+    font-size: 0.8rem;
+    color: #ccc;
+    font-family: 'Minecraft', sans-serif;
+}
+
+.large-text {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-family: 'Minecraft', sans-serif;
+}
+
+.download-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    filter: invert(100%);
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+    .minecraft-form {
+        padding: 20px;
+    }
+
+    .minecraft-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .minecraft-content p {
+        font-size: 0.9rem;
+    }
+
+    .info-box {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .info-image {
+        margin-right: 0;
+    }
+
+    .icon-download {
+        align-self: flex-end;
+    }
+
+    .download-icon {
+        align-self: flex-end;
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+}
