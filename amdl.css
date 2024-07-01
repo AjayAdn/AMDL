@@ -107,7 +107,6 @@ body {
 
 .navbar.dark .navbar_donate_me {
    background: transparent;
-   border: 1px solid var(--bg);
     padding: 0.44rem 0.94rem;
     border-radius: 20rem;
     padding: 0.5rem 1rem;
@@ -253,7 +252,7 @@ body {
 
 .tentang {
     display: flex;
-    height: 80vh;
+    height: 90vh;
     align-items: center;
     background-color: #C40018;
     justify-content: center;
@@ -307,6 +306,12 @@ body {
     background-color: #C40018;
 }
 
+.red-box-atas,
+.red-box-bawah {
+    height: 20px;
+}
+
+
 .red-box-atas {
     top: calc(100vh - 40px);
     width: 200px;
@@ -314,7 +319,7 @@ body {
 }
 
 .red-box-bawah {
-    top: calc(100vh - -75vh);
+    top: calc(100vh - -85vh);
     width: 200px;
     height: 80px;
 }
@@ -462,6 +467,8 @@ body {
     z-index: -1;
     padding: 10px;
     box-sizing: border-box;
+    border-top: 4px solid #FF6969;
+    border-bottom: 4px solid #A91D3A;
 }
 
 .minecraft-content p {
@@ -473,6 +480,37 @@ body {
     font-family: 'Minecraft', sans-serif;
 }
 
+/* Info Box Container */
+.info-box-container {
+    max-height: 290px; /* Adjust the height to show only 4 info boxes */
+    overflow-y: auto;
+    padding-right: 10px; /* To prevent content from hiding behind the scrollbar */
+    position: relative;
+}
+
+.scroll-indicator {
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    animation: bounce 1s infinite;
+}
+
+/* Bounce animation for scroll indicator */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* Info Box Styles */
 .info-box {
     display: flex;
     align-items: center;
@@ -480,13 +518,33 @@ body {
     background-color: #151515;
     color: #F5F7F8;
     position: relative;
+    border-top: 5px solid #373A40;
+    border-bottom: 5px solid #000;
+    transition: background-color 0.2s ease, transform 0.2s ease; /* Adding transition for smooth effect */
 }
+
+.info-box:active {
+    background-color: #C40018;
+    border-top: 5px solid #FF6969;
+    border-bottom: 5px solid #A91D3A;
+    transform: scale(0.95); /* Adding scale transformation to create "shrink" effect */
+}
+
+/* Reset scale back after clicking */
+    .info-box:focus {
+    outline: none; /* Optional, removes default focus outline */
+    background-color: #151515;
+    border-top: 5px solid #373A40;
+    border-bottom: 5px solid #000;
+}
+
 
 .info-image {
     width: 35px;
     height: 35px;
     margin-right: 10px;
     margin-left: 10px;
+    margin-top: 5px;
 }
 
 .info-text {
@@ -549,5 +607,64 @@ body {
         position: relative;
         top: 0;
         right: 0;
+    }
+    
+    #search-official, #search-beta, #search-patch {
+    	width: 150%;
+    }
+}
+
+
+
+/* Footer styles */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Minecraft', sans-serif;
+}
+
+
+footer p {
+    margin: 10px 0;
+    font-family: 'Minecraft', sans-serif;
+}
+
+
+/* Live Search Section */
+.live-search {
+    position: relative;
+    width: 300px;
+}
+
+/* Search Input */
+#search-official, #search-beta, #search-patch {
+    width: 102%;
+    padding: 10px 40px 10px 10px;
+    background-color: #151515;
+    color: #f5f7f8;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Minecraft', sans-serif;
+    margin-bottom: 20px;
+}
+
+#search-input::placeholder {
+    color: #888;
+    font-family: 'Minecraft', sans-serif;
+}
+
+.not-found-message {
+    font-family: 'MinePlayer', sans-serif;
+    font-size: 1.5rem;
+    color: #45474B;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 1440px) {
+    #search-official, #search-beta, #search-patch {
+    	width: 180%;
     }
 }
