@@ -630,7 +630,7 @@ footer p {
     margin-top: 10px;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
     #search-official, #search-beta, #search-patch {
      width: 400%;
    }
