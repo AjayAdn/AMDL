@@ -608,10 +608,6 @@ body {
         top: 0;
         right: 0;
     }
-    
-    #search-official, #search-beta, #search-patch {
-    	width: 150%;
-    }
 }
 
 
