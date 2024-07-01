@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" src="https://www.minecraft.net/content/dam/minecraftnet/games/dungeons/logos/Homepage_Gameplay-Trailer_MC-Dungeons-logo_300x300.png" type="image/x-icon"> <!-- Favicon link -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/minercraftory" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/minecraft-3" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/mineplayer" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <title>AMDL</title>
     <link rel="stylesheet" href="amdl.css">
 </head>
@@ -77,14 +78,20 @@
         </div>
     </section>
    
-  <section class="minecraft-official">
+<section class="minecraft-official">
     <form class="minecraft-form">
         <div class="minecraft-content">
             <h2>Minecraft Official</h2>
             <img src="https://www.minecraft.net/content/dam/games/minecraft/screenshots/PLAYTOGETHERPDPScreenshotRefresh2024_exitingPortal_01.png" alt="Minecraft Official" class="minecraft-image">
-            <p>To download Minecraft Official, choose your desired version and click the download icon. ðŸ“¥ Select from the latest updates and features for endless creativity</p>
-            
-            <div id="official-container"></div>
+            <p>To download Minecraft Official, choose your desired version and click the download icon.  Select from the latest updates and features for endless creativity</p>
+            <section class="live-search">
+                <div class="search-container">
+                    <input type="text" id="search-official" placeholder="Cari versi Minecraft...">
+                </div>
+            </section>
+            <div class="info-box-container">
+                <div id="official-container"></div>
+            </div>
         </div>
     </form>
 </section>
@@ -93,10 +100,16 @@
     <form class="minecraft-form">
         <div class="minecraft-content">
             <h2>Minecraft Beta</h2>
-            <img src="https://www.minecraft.net/content/dam/games/minecraft/screenshots/EXPERIENCE_MORE_MinecraftEDU_PrivacyProdigy_darkWeb.png" alt="Minecraft Official" class="minecraft-image">
-            <p>To download Minecraft Beta, choose your desired version and click the download icon. ðŸ“¥ Select from the latest updates and features for endless creativity</p>
-            
-            <div id="beta-container"></div>
+            <img src="https://www.minecraft.net/content/dam/games/minecraft/screenshots/EXPERIENCE_MORE_MinecraftEDU_PrivacyProdigy_darkWeb.png" alt="Minecraft Beta" class="minecraft-image">
+            <p>To download Minecraft Beta, choose your desired version and click the download icon.  Select from the latest updates and features for endless creativity</p>
+            <section class="live-search">
+                <div class="search-container">
+                    <input type="text" id="search-beta" placeholder="Cari versi Minecraft...">
+                </div>
+            </section>
+            <div class="info-box-container">
+                <div id="beta-container"></div>
+            </div>
         </div>
     </form>
 </section>
@@ -106,25 +119,37 @@
         <div class="minecraft-content">
             <h2>Minecraft Patch</h2>
             <img src="https://www.minecraft.net/content/dam/games/minecraft/screenshots/EXPLORE_PDPScreenshotRefresh2024_multipleBiomes_01.png" alt="Minecraft Patch" class="minecraft-image">
-            <p>To download Minecraft Patch, choose your desired version and click the download icon. ðŸ“¥ Select from the latest updates and features for endless creativity</p>
-            
+            <p>To download Minecraft Patch, choose your desired version and click the download icon.  Select from the latest updates and features for endless creativity</p>
+            <section class="live-search">
+                <div class="search-container">
+                    <input type="text" id="search-patch" placeholder="Cari versi Minecraft...">
+                </div>
+            </section>
             <div class="patch-options">
                 <div class="patch-option" id="patch32-container">
                     <h3>32-bit</h3>
+                    <div class="info-box-container">
                     <div id="patch32-bit-container"></div>
                 </div>
-                
+                </div>
                 <div class="patch-option" id="patch64-container">
                     <h3>64-bit</h3>
+                    <div class="info-box-container">
                     <div id="patch64-bit-container"></div>
+                </div>
                 </div>
             </div>
         </div>
     </form>
 </section>
 
-<script src="system.js"></script>
+
+<footer>
+    <p>&copy; <span id="currentYear"></span> AMDL. All rights reserved.</p>
+</footer>
+
+<script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+<script src="system.js" type="module"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
 </html>
-
-
