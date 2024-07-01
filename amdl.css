@@ -480,35 +480,6 @@ body {
     font-family: 'Minecraft', sans-serif;
 }
 
-/* Info Box Container */
-.info-box-container {
-    max-height: 290px; /* Adjust the height to show only 4 info boxes */
-    overflow-y: auto;
-    padding-right: 10px; /* To prevent content from hiding behind the scrollbar */
-    position: relative;
-}
-
-.scroll-indicator {
-    text-align: center;
-    color: #ccc;
-    font-size: 0.9rem;
-    margin-top: 10px;
-    animation: bounce 1s infinite;
-}
-
-/* Bounce animation for scroll indicator */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
-
 
 /* Info Box Styles */
 .info-box {
@@ -660,25 +631,7 @@ footer p {
 }
 
 @media (min-width: 1440px) {
-	#search-official, #search-beta, #search-patch {
-	width: 400%;
-	}
-	.info-box-container {
-      max-height: 290px; /* Adjust the height to show only 4 info boxes */
-      overflow-y: auto;
-      padding-right: 5px; /* To prevent content from hiding behind the scrollbar */
-      position: relative;
-    }
-
-     .info-box-container::-webkit-scrollbar {
-     width: 5px; /* Set the width of the scrollbar */
-     }
-
-     .info-box-container::-webkit-scrollbar-thumb {
-      background-color: #888; /* Color of the scrollbar thumb */
-     }
-
-     .info-box-container::-webkit-scrollbar-track {
-      background: #151515; /* Color of the scrollbar track */
-     }
+    #search-official, #search-beta, #search-patch {
+     width: 400%;
+   }
 }
