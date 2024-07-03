@@ -602,13 +602,15 @@ footer p {
 /* Live Search Section */
 .live-search {
     position: relative;
-    width: 300px;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 /* Search Input */
 #search-official, #search-beta, #search-patch {
-    width: 104%;
-    padding: 10px 40px 10px 10px;
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
     background-color: #151515;
     color: #f5f7f8;
     font-size: 16px;
@@ -622,16 +624,11 @@ footer p {
     font-family: 'Minecraft', sans-serif;
 }
 
+
 .not-found-message {
     font-family: 'MinePlayer', sans-serif;
     font-size: 1.5rem;
     color: #45474B;
     text-align: center;
     margin-top: 10px;
-}
-
-@media (min-width: 1024px) {
-    #search-official, #search-beta, #search-patch {
-     width: 190%;
-   }
 }
