@@ -624,8 +624,8 @@ footer p {
 
 /* Search Input */
 #search-official, #search-beta, #search-patch {
-    width: 100%;
-    max-width: 100%; /* Full width */
+    width: 145%;
+    max-width: 145%; /* Full width */
     padding: 10px;
     background-color: #151515;
     color: #f5f7f8;
